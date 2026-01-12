@@ -1,0 +1,244 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get in touch with Digital8. Let's build something real." />
+    <title>Contact - Digital8</title>
+  </head>
+  <body class="bg-[#0a0a0a] text-white min-h-screen antialiased">
+    <!-- Navigation Bar -->
+    <Navbar />
+
+    <!-- Contact Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-20 relative overflow-hidden">
+      <!-- Cyber Engineering Grid Background -->
+      <div class="absolute inset-0 cyber-grid pointer-events-none opacity-30"></div>
+      
+      <!-- Radial Gradient Spotlight Effect -->
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);"></div>
+      
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left Column: Headline & Contact Info -->
+          <div class="space-y-8">
+            <div class="space-y-6">
+              <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-white">
+                Let's Build.
+              </h1>
+              <!-- Trust Signal: Response Time -->
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-[#c9d40c]/10 border border-[#c9d40c]/20 rounded-lg">
+                <svg class="w-4 h-4 text-[#c9d40c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-sm font-medium text-[#c9d40c]">Avg. Response Time: &lt; 2 Hours</span>
+              </div>
+              <p class="text-xl sm:text-2xl text-gray-400 leading-relaxed max-w-2xl">
+                Ready to turn your website into a revenue-driving machine? Let's talk.
+              </p>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="space-y-4 pt-8">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                  <svg class="w-6 h-6 text-[#c9d40c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm uppercase tracking-wider mb-1">Email</p>
+                  <a href="mailto:daniel@digital8.ca" class="text-white hover:text-[#c9d40c] transition-colors duration-200 text-lg font-semibold">
+                    daniel@digital8.ca
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 sm:p-10 lg:p-12 shadow-xl">
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mdaaogzb"
+              method="POST"
+              class="space-y-6"
+            >
+              <!-- Name Input -->
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  placeholder="Your name"
+                  class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-[#c9d40c] transition-all"
+                />
+              </div>
+
+              <!-- Email Input -->
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                  Work Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="you@company.com"
+                  class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-[#c9d40c] transition-all"
+                />
+              </div>
+
+              <!-- Service Interest Dropdown -->
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-300 mb-2">
+                  Service Interest
+                </label>
+                <select
+                  name="service"
+                  id="service"
+                  required
+                  style="color-scheme: dark;"
+                  class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 focus:outline-none focus:ring-0 focus:border-[#c9d40c] transition-all cursor-pointer"
+                >
+                  <option value="" disabled selected class="text-gray-500">Select a service</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Custom Apps">Custom Apps</option>
+                  <option value="SEO Audits">SEO Audits</option>
+                  <option value="E-commerce">E-commerce</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- Estimated Budget Dropdown -->
+              <div>
+                <label for="budget" class="block text-sm font-medium text-gray-300 mb-2">
+                  Estimated Budget
+                </label>
+                <select
+                  name="budget"
+                  id="budget"
+                  required
+                  style="color-scheme: dark;"
+                  class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 focus:outline-none focus:ring-0 focus:border-[#c9d40c] transition-all cursor-pointer"
+                >
+                  <option value="" disabled selected class="text-gray-500">Select a range</option>
+                  <option value="5k-10k">$5k - $10k</option>
+                  <option value="10k-25k">$10k - $25k</option>
+                  <option value="25k+">$25k+</option>
+                  <option value="Enterprise">Enterprise</option>
+                </select>
+              </div>
+
+              <!-- Project Details Textarea -->
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
+                  Project Details
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  required
+                  placeholder="Tell us about your project, goals, and timeline..."
+                  class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-[#c9d40c] transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="w-full px-8 py-4 bg-[#c9d40c] text-[#0a0a0a] font-bold rounded-lg hover:bg-[#b8c20b] transition-all duration-200 shadow-lg shadow-[#c9d40c]/30 hover:shadow-[#c9d40c]/40 hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Send Message
+              </button>
+
+              <!-- Trust Signal: NDA -->
+              <p class="text-xs text-gray-600 text-center mt-4">
+                We respect your IP. Non-Disclosure Agreement (NDA) available upon request.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer />
+
+    <style>
+      /* Dark mode dropdown styling */
+      option {
+        background-color: #1a1a1a;
+        color: white;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-form');
+        const submitButton = form?.querySelector('button[type="submit"]');
+
+        if (form) {
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Disable button and show loading state
+            if (submitButton) {
+              const originalText = submitButton.textContent;
+              submitButton.disabled = true;
+              submitButton.textContent = 'Sending...';
+              submitButton.classList.add('opacity-75', 'cursor-not-allowed');
+            }
+
+            try {
+              // Get form data
+              const formData = new FormData(form);
+
+              // Send to Formspree with JSON response
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                  Accept: 'application/json',
+                },
+              });
+
+              if (response.ok) {
+                // Success: redirect to success page
+                window.location.href = '/success';
+              } else {
+                // Error: show alert and re-enable button
+                alert('Submission failed, please try again.');
+                if (submitButton) {
+                  submitButton.disabled = false;
+                  submitButton.textContent = originalText;
+                  submitButton.classList.remove('opacity-75', 'cursor-not-allowed');
+                }
+              }
+            } catch (error) {
+              // Network error or other exception
+              alert('Submission failed, please try again.');
+              if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+                submitButton.classList.remove('opacity-75', 'cursor-not-allowed');
+              }
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

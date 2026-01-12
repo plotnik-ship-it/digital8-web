@@ -1,0 +1,24 @@
+# Project Context: Digital8 Website (Canadian Market Target)
+
+## 1. Tech Stack & Principles
+- **Framework:** Astro (Static Site Generation).
+- **Styling:** Tailwind CSS v4.
+- **Language:** English (Canadian/US spelling).
+- **Performance:** Obsessive focus on Core Web Vitals (Lighthouse 100).
+
+## 2. Brand Voice & Copywriting (CRITICAL)
+- **Target Audience:** Canadian small business owners who are tired of slow, broken, or generic websites.
+- **Tone:** Professional, direct, trustworthy, and "No-Nonsense".
+- **Key Message:** "A slow website is costing you customers. A cheap website is a liability. We build high-performance digital assets."
+- **Simplicity:** Do NOT use tech jargon (No "React", "Hydration", "Latency"). Use business terms: "Instant load", "Google Ranking", "Customer Retention".
+
+## 3. Design System
+- **Visuals:** Dark Mode, sleek, "Silicon Valley" aesthetic but accessible.
+- **Components:** High-contrast pricing tables, clear CTAs, speed comparison graphs.
+
+## 4. Behavior & Copywriting Style
+- **Voice:** Use extremely simple, non-technical Spanish. Explain benefits, not features. (e.g., instead of "SEO Optimization", say "Aparece primero en Google").
+- **Key Message:** Speed = Sales. Slow websites = Lost money.
+- **Competitor Stance:** Aggressively but professionally differentiate from WordPress. Refer to WP as "generic templates full of heavy, unnecessary code" vs. our "hand-crafted, ultra-light code".
+- **Visual Style:** High impact, "Scrollytelling", large typography, clear contrast.
+- **Animations:** Use distinct entrance animations (fade-up, slide-in) using Framer Motion (loaded lazily) or CSS Keyframes. Must feel "fast" and "smooth".

@@ -1,0 +1,262 @@
+---
+import { SpeedComparison } from '../components/SpeedComparison';
+import { RevenueCalculator } from '../components/RevenueCalculator';
+import { Digital8Labs } from '../components/Digital8Labs';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Manifesto from '../components/Manifesto.astro';
+import TechTranslator from '../components/TechTranslator.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="We build custom engineered websites that load instantly. No slow WordPress templates. Just results. SEO & Speed optimized for Canadian businesses." />
+    <title>Digital8 | High-Performance Web Engineering</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-[#0a0a0a] text-white min-h-screen antialiased">
+    <!-- Navigation Bar -->
+    <Navbar />
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-20 relative overflow-hidden">
+      <!-- Cyber Engineering Grid Background -->
+      <div class="absolute inset-0 cyber-grid pointer-events-none"></div>
+      
+      <!-- Radial Gradient Spotlight Effect -->
+      <div class="absolute inset-0 bg-radial-gradient pointer-events-none" style="background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);"></div>
+      
+      <!-- Subtle background gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-br from-white/[0.02] via-transparent to-transparent pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Left Column: Value Proposition -->
+          <div class="space-y-8">
+            <div class="space-y-6">
+              <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-white">
+                Your website is likely losing you money.
+              </h1>
+              <p class="text-xl sm:text-2xl text-gray-400 leading-relaxed max-w-2xl">
+                We build custom engineered websites that load instantly. No slow WordPress templates. Just results.
+              </p>
+            </div>
+            
+            <!-- Speed Check Input -->
+            <div class="space-y-4 pt-4">
+              <div class="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="url"
+                  id="url-input"
+                  placeholder="Enter your website URL"
+                  class="flex-1 px-6 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20 transition-all backdrop-blur-md shadow-lg"
+                />
+                <button
+                  id="check-speed-btn"
+                  class="px-8 py-4 bg-white text-[#0a0a0a] font-semibold rounded-lg hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-200 whitespace-nowrap shadow-lg"
+                >
+                  Check Speed Impact
+                </button>
+              </div>
+              <p class="text-sm text-gray-500">
+                See how your current site compares to our performance standards
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Proof -->
+          <div class="flex items-center justify-center">
+            <SpeedComparison client:load />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Revenue Calculator Section -->
+    <section id="calculator" class="py-20 px-4 sm:px-6 lg:px-8 scroll-mt-20">
+      <RevenueCalculator client:load />
+    </section>
+
+    <!-- Digital8 Labs Section -->
+    <div id="labs" class="scroll-mt-20">
+      <Digital8Labs client:load />
+    </div>
+
+    <!-- Tech Translator Section -->
+    <TechTranslator />
+
+    <!-- Manifesto Section -->
+    <Manifesto />
+
+    <!-- Trust Section -->
+    <section class="py-16 border-t border-white/10 bg-gradient-to-b from-transparent to-white/[0.01]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Powered by modern tech</p>
+        </div>
+        <!-- Marquee Container -->
+        <div class="relative overflow-hidden">
+          <div class="marquee-track flex items-center gap-16 w-max">
+            <!-- Logo Set 1 -->
+            <img
+              src="https://astro.build/assets/press/astro-logo-light.svg"
+              alt="Astro"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg"
+              alt="React"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg"
+              alt="TypeScript"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21.svg"
+              alt="Tailwind CSS"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/google/google-ar21.svg"
+              alt="Google"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            
+            <!-- Logo Set 2 (Duplicate for seamless loop) -->
+            <img
+              src="https://astro.build/assets/press/astro-logo-light.svg"
+              alt="Astro"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg"
+              alt="React"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-ar21.svg"
+              alt="TypeScript"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-ar21.svg"
+              alt="Tailwind CSS"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+            <img
+              src="https://www.vectorlogo.zone/logos/google/google-ar21.svg"
+              alt="Google"
+              class="tech-logo h-12 sm:h-14 w-auto"
+            />
+          </div>
+        </div>
+
+        <style>
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .marquee-track {
+            animation: scroll 20s linear infinite;
+          }
+
+          .marquee-track:hover {
+            animation-play-state: paused;
+          }
+
+          /* Tech Logo Ghost Effect */
+          .tech-logo {
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+          }
+
+          .tech-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer />
+
+    <script>
+      // Speed Check Button Functionality
+      const checkSpeedBtn = document.getElementById('check-speed-btn');
+      const urlInput = document.getElementById('url-input');
+      const calculatorSection = document.getElementById('calculator');
+      const originalButtonText = checkSpeedBtn?.textContent || 'Check Speed Impact';
+
+      if (checkSpeedBtn && urlInput && calculatorSection) {
+        checkSpeedBtn.addEventListener('click', () => {
+          const url = urlInput.value.trim();
+
+          // Validation: Check if input is empty
+          if (!url) {
+            // Add shake animation
+            urlInput.classList.add('animate-shake');
+            urlInput.focus();
+            
+            // Remove shake class after animation
+            setTimeout(() => {
+              urlInput.classList.remove('animate-shake');
+            }, 500);
+            return;
+          }
+
+          // Show loading state
+          checkSpeedBtn.textContent = 'Analyzing...';
+          checkSpeedBtn.disabled = true;
+          checkSpeedBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+          // Simulate network request (1.5 seconds)
+          setTimeout(() => {
+            // Smooth scroll to calculator section
+            calculatorSection.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+            // Reset button after a brief delay
+            setTimeout(() => {
+              checkSpeedBtn.textContent = originalButtonText;
+              checkSpeedBtn.disabled = false;
+              checkSpeedBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }, 500);
+          }, 1500);
+        });
+
+        // Allow Enter key to trigger check
+        urlInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            checkSpeedBtn.click();
+          }
+        });
+      }
+    </script>
+
+    <style>
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+        20%, 40%, 60%, 80% { transform: translateX(8px); }
+      }
+      .animate-shake {
+        animation: shake 0.5s ease-in-out;
+        border-color: rgba(239, 68, 68, 0.5) !important;
+      }
+    </style>
+  </body>
+</html>
