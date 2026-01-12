@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Manifesto from '../components/Manifesto.astro';
 import TechTranslator from '../components/TechTranslator.astro';
+import Capabilities from '../components/Capabilities.astro';
 import '../styles/global.css';
 ---
 
@@ -38,7 +39,7 @@ import '../styles/global.css';
           <div class="space-y-8">
             <div class="space-y-6">
               <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-white">
-                Your website is likely losing you money.
+                Your website is likely <span class="text-[#c9d40c]">losing you money.</span>
               </h1>
               <p class="text-xl sm:text-2xl text-gray-400 leading-relaxed max-w-2xl">
                 We build custom engineered websites that load instantly. No slow WordPress templates. Just results.
@@ -74,6 +75,9 @@ import '../styles/global.css';
         </div>
       </div>
     </section>
+
+    <!-- Capabilities Section -->
+    <Capabilities />
 
     <!-- Revenue Calculator Section -->
     <section id="calculator" class="py-20 px-4 sm:px-6 lg:px-8 scroll-mt-20">
@@ -199,7 +203,11 @@ import '../styles/global.css';
       const calculatorSection = document.getElementById('calculator');
       const originalButtonText = checkSpeedBtn?.textContent || 'Check Speed Impact';
 
-      if (checkSpeedBtn && urlInput && calculatorSection) {
+      if (
+        checkSpeedBtn instanceof HTMLButtonElement &&
+        urlInput instanceof HTMLInputElement &&
+        calculatorSection
+      ) {
         checkSpeedBtn.addEventListener('click', () => {
           const url = urlInput.value.trim();
 

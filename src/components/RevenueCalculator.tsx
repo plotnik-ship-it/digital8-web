@@ -204,7 +204,7 @@ export function RevenueCalculator() {
               </motion.a>
               
               {/* Disclaimer */}
-              <p className="text-xs text-gray-600 text-center mt-4">
+              <p className="text-xs text-gray-400 text-center mt-4 px-4 mx-auto leading-tight">
                 Estimates based on Google & Amazon latency studies. Actual results vary based on your specific traffic and business model.
               </p>
             </div>
